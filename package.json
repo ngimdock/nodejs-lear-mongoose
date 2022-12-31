@@ -1,0 +1,20 @@
+{
+  "name": "learn-mongoose",
+  "version": "1.0.0",
+  "description": "Simple directory to learn mongoose ODM for mongodb no sql database",
+  "main": "\t",
+  "repository": "https://github.com/ngimdock/learn-mogoose.git",
+  "author": "ngimdock <ngimdockzemfack@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon script.js",
+    "db:dev:up": "docker compose up mongodb -d",
+    "db:dev:rm": "docker compose rm mongodb -s -f -v",
+    "db:dev:restart": "yarn db:dev:rm && yarn db:dev:up"
+  },
+  "private": false,
+  "dependencies": {
+    "mongoose": "^6.8.2",
+    "nodemon": "^2.0.20"
+  }
+}
