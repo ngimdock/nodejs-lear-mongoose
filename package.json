@@ -6,6 +6,7 @@
   "repository": "https://github.com/ngimdock/learn-mogoose.git",
   "author": "ngimdock <ngimdockzemfack@gmail.com>",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "start": "nodemon script.js",
     "db:dev:up": "docker compose up mongodb -d",
