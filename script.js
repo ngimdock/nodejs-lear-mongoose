@@ -36,6 +36,8 @@ async function run() {
     console.log({ users });
     console.log({ users2 });
     users[0].sayHi();
+
+    console.log(users[0].namedEmail);
   } catch (err) {
     console.log({ errorMessage: err.message });
   }
