@@ -29,15 +29,19 @@ async function run() {
   };
 
   try {
-    const users = await User.findByName("ngimfack").populate("bestFriend");
+    // const user = await User.create({
+    //   name: "danfack",
+    //   email: "danilix@gmail.com",
+    //   phone: "000-222-0000",
+    // });
 
-    const users2 = await User.find().byName("temfack");
+    const user = await User.findOne({ name: "danfack" });
 
-    console.log({ users });
-    console.log({ users2 });
-    users[0].sayHi();
+    user.hobbies = ["dance", "mangas"];
 
-    console.log(users[0].namedEmail);
+    await user.save();
+
+    console.log({ user });
   } catch (err) {
     console.log({ errorMessage: err.message });
   }

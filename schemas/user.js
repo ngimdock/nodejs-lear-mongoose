@@ -71,6 +71,16 @@ userSchema.virtual("namedEmail").get(function () {
   return `${this.name} <${this.email}>`;
 });
 
+userSchema.pre("save", function (next) {
+  this.updatedAt = Date.now();
+  next();
+});
+
+userSchema.post("save", function (doc, next) {
+  doc.sayHi();
+  next();
+});
+
 const User = model("User", userSchema);
 
 export default User;
